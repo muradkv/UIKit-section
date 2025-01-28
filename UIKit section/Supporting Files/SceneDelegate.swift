@@ -14,6 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        /*
         let imageSaver = UserDefaultsSaver<Data>()
         let textSaver = UserDefaultsSaver<String>()
         
@@ -22,12 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let profileService = ProfileService(
             imageService: imageService,
             textService: textService
-        )
+        )*/
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TaskUIStackViewViewController(profileService: profileService)
-        window?.makeKeyAndVisible() 
+        window?.rootViewController = UICollectionViewMod1()
+        window?.makeKeyAndVisible()
     }
 }
 
